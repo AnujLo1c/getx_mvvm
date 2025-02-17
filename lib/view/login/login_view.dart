@@ -6,6 +6,7 @@ import 'package:getx_demo/view/login/widgets/input_password_widget.dart';
 import 'package:getx_demo/view/login/widgets/login_button_widget.dart';
 
 
+import '../../Theme/r.dart';
 import '../view_models/controller/login_view_model.dart';
 
 class LoginView extends StatelessWidget {
@@ -16,10 +17,12 @@ class LoginView extends StatelessWidget {
     LoginViewModel controller=Get.put(LoginViewModel());
     var formkey=GlobalKey<FormState>();
     return Scaffold(
+
       appBar: AppBar(
         centerTitle: true,
         automaticallyImplyLeading: false,
         title: Text("Login"),
+        backgroundColor: R.colors.primary,
 
       ),
 body: Padding(
@@ -28,6 +31,7 @@ body: Padding(
     mainAxisAlignment: MainAxisAlignment.center,
     crossAxisAlignment: CrossAxisAlignment.center,
     children: [
+      Image(image: AssetImage(R.assets.google)),
       Form(
         key: formkey,
         child: Column(
