@@ -1,25 +1,20 @@
-import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
+// import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
+import 'package:getx_demo/res/routes/route_names.dart';
 import 'package:getx_demo/res/routes/routes.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
-Future<void> main() async {
-  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  Timer(Duration(seconds: 1), ()=>FlutterNativeSplash.remove());
-  bool isLoggedIn = prefs.getBool('isLogin') ?? false;
-  runApp(MyApp(isLoggedIn: isLoggedIn));
+ main() {
+
+  runApp(const MyApp());
 }
 
 
 class MyApp extends StatelessWidget {
-  final bool isLoggedIn;
-  const MyApp({super.key,required this.isLoggedIn});
+
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +25,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       getPages: AppRoutes.routes,
-      initialRoute: isLoggedIn?"/home":"/login",
+      initialRoute: RouteNames.splashView,
 
     );
   }

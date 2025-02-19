@@ -2,11 +2,12 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:getx_demo/domain/models/user.dart';
 import 'package:getx_demo/res/routes/route_names.dart';
-import 'package:getx_demo/view/view_models/controller/user_shared_pref/user_shared_pref.dart';
+
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../data/repository/login_repository.dart';
 import '../../../../utils/utils.dart';
+import '../user_shared_pref/user_shared_pref.dart';
 
 class HomeViewModel{
 

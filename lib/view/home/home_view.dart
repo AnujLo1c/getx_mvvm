@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:getx_demo/view/home/widgets/logout_dialog.dart';
 
-import '../view_models/controller/home/home_view_model.dart';
-import '../view_models/controller/login/login_view_model.dart';
+import '../../view_models/controller/home/home_view_model.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -14,8 +14,9 @@ class HomeView extends StatelessWidget {
     HomeViewModel controller = Get.put(HomeViewModel());
     return Scaffold(
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        
         children: [
+          Gap(100),
           ElevatedButton(
               onPressed: () {
                 controller.fetchUserDetails();

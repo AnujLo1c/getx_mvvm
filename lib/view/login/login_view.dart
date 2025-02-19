@@ -7,7 +7,8 @@ import 'package:getx_demo/view/login/widgets/login_button_widget.dart';
 
 
 import '../../Theme/r.dart';
-import '../view_models/controller/login/login_view_model.dart';
+import '../../view_models/controller/login/login_view_model.dart';
+
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});

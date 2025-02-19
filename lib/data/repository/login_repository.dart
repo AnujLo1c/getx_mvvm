@@ -15,10 +15,7 @@ class LoginRepository {
     }
     return response ;
   }
-  apiStatus() async {
-    dynamic response=await _apiService.getApi(AppUrl.apiHealthCheck);
-    return response;
-  }
+
   fetchUserDetails(String token) async{
    dynamic response=await _apiService.getDataApi(AppUrl.userdetails,Options(
      headers: {

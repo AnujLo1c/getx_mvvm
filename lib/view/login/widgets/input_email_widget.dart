@@ -3,7 +3,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 
 
-import '../../view_models/controller/login/login_view_model.dart';
+import '../../../view_models/controller/login/login_view_model.dart';
 
 class InputEmailWidget extends StatelessWidget {
    InputEmailWidget({super.key});
