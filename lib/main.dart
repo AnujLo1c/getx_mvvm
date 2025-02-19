@@ -10,8 +10,8 @@ Future<void> main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
-  Timer(Duration(seconds: 2), ()=>FlutterNativeSplash.remove());
   SharedPreferences prefs = await SharedPreferences.getInstance();
+  Timer(Duration(seconds: 1), ()=>FlutterNativeSplash.remove());
   bool isLoggedIn = prefs.getBool('isLogin') ?? false;
   runApp(MyApp(isLoggedIn: isLoggedIn));
 }

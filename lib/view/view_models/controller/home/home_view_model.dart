@@ -26,7 +26,7 @@ Utils.toastMessage(e.toString());
     }
   }
 
-  Future<void> logout() async {
+  Future<void> logoutUser() async {
  userSharedPref.removeUser().then((value) {
    Get.toNamed(RouteNames.loginView);
    Utils.toastMessage("Log-Out successfully");
