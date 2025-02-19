@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../view_models/controller/login_view_model.dart';
+import '../../view_models/controller/login/login_view_model.dart';
 
 class LoginButtonWidget extends StatelessWidget {
   final formKey;
@@ -15,7 +15,6 @@ controller.isLoading.value=true;
 controller.loginUserApi();
       }
     },
-
         child: Obx(() =>  controller.isLoading.value?CircularProgressIndicator():Text("Login")));
   }
 }

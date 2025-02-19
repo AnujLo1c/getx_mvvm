@@ -7,7 +7,7 @@ import 'package:getx_demo/view/login/widgets/login_button_widget.dart';
 
 
 import '../../Theme/r.dart';
-import '../view_models/controller/login_view_model.dart';
+import '../view_models/controller/login/login_view_model.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -25,35 +25,31 @@ class LoginView extends StatelessWidget {
         backgroundColor: R.colors.primary,
 
       ),
-body: Padding(
-  padding: const EdgeInsets.symmetric(horizontal: 20),
-  child: Column(
-    mainAxisAlignment: MainAxisAlignment.center,
-    crossAxisAlignment: CrossAxisAlignment.center,
-    children: [
-      Image(image: AssetImage(R.assets.google)),
-      Form(
-        key: formkey,
-        child: Column(
-          children: [
-            InputEmailWidget(),
-Gap(20),
-            InputPasswordWidget(),
-    Obx(() =>
-        controller.response.value==""?Text("asdf"):Text(controller.response.value,style: TextStyle(color: Colors.blue),)
-    )
+body: SingleChildScrollView(
+  child: Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 20),
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Image(image: AssetImage(R.assets.google)),
+        Form(
+          key: formkey,
+          child: Column(
+            children: [
+              InputEmailWidget(),
+  Gap(20),
+              InputPasswordWidget(),
 
-
-    ],
+      ],
+          ),
         ),
-      ),
-
-      Gap(40),
-      LoginButtonWidget(formKey: formkey),
-      ElevatedButton(onPressed: (){
-        controller.fetchUserDetails();
-      }, child: Text("Fetch user details"))
-    ],
+  
+        Gap(40),
+        LoginButtonWidget(formKey: formkey),
+  
+      ],
+    ),
   ),
 ),
     );
