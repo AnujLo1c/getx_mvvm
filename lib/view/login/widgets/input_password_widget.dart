@@ -12,8 +12,8 @@ class InputPasswordWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Obx(() =>
        TextFormField(
-        controller: controller.passwordController.value,
-        focusNode: controller.passwordFocusNode.value,
+        // controller: controller.passwordController.value,
+        // focusNode: controller.passwordFocusNode.value,
         validator: (value) {
           if(value!.isEmpty){
             Fluttertoast.showToast(msg: "Enter password");

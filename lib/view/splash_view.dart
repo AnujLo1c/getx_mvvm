@@ -19,6 +19,6 @@ SplashService splashService=SplashService();
   }
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(body: Center(child: Image.asset(R.assets.google),));
+    return  Scaffold(body: Center(child: Image.asset(R.assets.logo),));
   }
 }

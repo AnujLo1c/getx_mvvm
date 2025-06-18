@@ -19,9 +19,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Getx Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        // primaryColor: Color(0xFF1A9EB7),
+
         useMaterial3: true,
       ),
       getPages: AppRoutes.routes,

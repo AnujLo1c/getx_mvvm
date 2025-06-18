@@ -13,7 +13,7 @@ class SplashService {
     userPreference.getUser().then((value) {
       Timer(const Duration(seconds: 3), () {
         if (value.isLogin == false || value.isLogin.toString() == 'null') {
-          Get.toNamed(RouteNames.loginView);
+          Get.toNamed(RouteNames.introView);
         } else {
           Get.toNamed(RouteNames.homeView);
         }
